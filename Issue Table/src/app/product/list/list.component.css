@@ -1,0 +1,17 @@
+.list-action-button{
+    padding: 8px 0px 8px 0px;
+}
+
+.delete-label{
+    cursor: pointer;
+    color: red;
+}
+
+.action-label{
+  color: cadetblue;
+  /* font-family: monospace; */
+}
+
+.table-striped{
+  font-family: monospace;
+}

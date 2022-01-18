@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm">
+    <h4 style="text-align: center;color:blue;">Add Issues</h4>
+  </div>
+</div>
+<br>
+
+<form [formGroup]="productForm">
+  <div class="jumbotron col-sm-8" style="margin:auto;background-color: skyblue;border: 1px solid blue;">
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label" style="color: blue;"><b>Title</b></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="Title">
+        <div *ngIf="formSubmitted && productForm.get('Title').errors"  class="invalid-error">
+          <div *ngIf="productForm.get('Title').errors.required">Title is required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label" style="color: blue;"><b>Description</b></label>
+      <div class="col-sm-10">
+        <textarea type="text" class="form-control" formControlName="Description" rows="3"></textarea>
+        <div *ngIf="formSubmitted && productForm.get('Description').errors"  class="invalid-error">
+          <div *ngIf="productForm.get('Description').errors.required">Description is required</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group row">&nbsp;</div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">&nbsp;</label>
+      <div class="col-sm-10">
+          <button type="button" class="btn btn-primary" (click)="save($event)" >&nbsp;Save</button>&nbsp;
+          <button type="button" class="btn btn-primary" routerLink='/products'>&nbsp;Cancel</button>
+      </div>
+    </div>
+  </div>
+</form>
