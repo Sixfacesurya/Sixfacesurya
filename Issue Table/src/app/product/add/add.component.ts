@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Observable, Subscription } from 'rxjs';
-import { Lookup } from '../models/lookup';
 import { Product, IProduct } from '../models/product';
 import { ProductService } from '../service/product.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
