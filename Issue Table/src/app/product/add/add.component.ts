@@ -54,14 +54,12 @@ export class AddComponent implements OnInit, OnDestroy {
   }
 
   save($event:any):void{
-
     this.formSubmitted = true;
     if(!this.productForm.valid){
       return;
     }
 
     this.saveProduct();
-
     // navigate back to products list
     this.router.navigate(['/products']);
   }
